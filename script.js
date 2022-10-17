@@ -79,7 +79,7 @@ const validateData = function () {
     typeValid &&
     weightValid &&
     lengthValid &&
-    breedInput;
+    breedValid;
 
   if (validInput) {
     valid = true;
