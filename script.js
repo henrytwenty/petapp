@@ -246,12 +246,15 @@ const calcBMI = function (weight, length, type) {
   if (type === "Cat") return (weight * 886) / length ** 2;
 };
 bmiBtn.addEventListener("click", function () {
-  for (let i = 0; i < petArr.length; i++) {
-    petArr[i].bmi = calcBMI(
-      petArr[i].weight,
-      petArr[i].length,
-      petArr[i].type
-    ).toFixed(2);
-  }
+  // for (let i = 0; i < petArr.length; i++) {
+  //   petArr[i].bmi = calcBMI(
+  //     petArr[i].weight,
+  //     petArr[i].length,
+  //     petArr[i].type
+  //   ).toFixed(2);
+  // }
+  petArr.forEach(
+    (pet) => (pet.bmi = calcBMI(pet.weight, pet.length, pet.type).toFixed(2))
+  );
   renderTableData(petArr);
 });
